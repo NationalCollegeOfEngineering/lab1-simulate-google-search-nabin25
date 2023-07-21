@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <style>
+        h3 {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        fieldset {
+            margin: 50px auto;
+            height: 400px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        #btn {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>This is a demo for form validation using javascript.</h3>
+    <div class="form-box">
+        <fieldset>
+            <legend>Enter your details</legend>
+            <form action="" method="get">
+                <br><br>
+                <label for="name"> Name: </label>
+                <input type="text" name="name" id="name" minlength="4" required>
+                <br><br>
+                <label for="pw">Password:</label>
+                <input type="password" name="pw" id="pw" minlength="8" maxlength="16" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" pattern="^[a-zA-Z0-9]+@+[a-zA-Z]+\.[a-z]{2,3}$" required>
+                <br><br>
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" max="100" min="1" required>
+                <br>
+                <button id="btn" type="submit">Submit</button>
+                <br><br>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
